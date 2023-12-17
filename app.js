@@ -6,6 +6,7 @@ const https = require("https")
 require("dotenv").config()
 
 var list= process.env.List_key
+var A_Key= process.env.API_key
 
 const port = process.env.PORT || 3000
 
@@ -67,7 +68,7 @@ app.get("/", function(req, res) {
 
       const options={
         method: "POST",
-        auth:process.env.API_key
+        auth:A_Key
        
       }
 
